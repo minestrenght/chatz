@@ -1,0 +1,19 @@
+Owner doc id: <input type='text' id='oid'/><br/>
+Recrd doc id: <input type='text' id='rid'/><br/>
+<input type='button' value='Delete Contact' onclick='del()'/>
+
+<form method="post" id='fid'>
+    <input type='hidden' name='_method' value='delete'/>
+</form>
+
+<script>
+<!--//
+var del = function() {
+    var oid = document.getElementById('oid').value;
+    var rid = document.getElementById('rid').value;
+    var fid = document.getElementById('fid');
+    fid.action = "http://jsonengine.appspot.com/_je/user-contact-" + oid + "/" + rid;
+    fid.submit();
+};
+//-->
+</script>
