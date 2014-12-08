@@ -2,7 +2,8 @@
 <script>
 $(function() {
     $.ajax({
-        'url' : 'http://jsonengine.appspot.com/_je/user-account?callback=?',
+        'url' : 'http://jsonengine.appspot.com/_je/user-account',
+        'contentType': 'jsonp',
         'success' : function(resp) {
             console.log(resp);
         },
