@@ -1,0 +1,19 @@
+<iframe src="http://jsonengine.appspot.com/_je/user-account"></iframe>
+
+<form method="post" id='fid'>
+	Recrd doc id: <input type='text' id='rid'/><br/>
+	Login: <input type='radio' name='login' value='true'/>Yes
+	 <input type='radio' name='login' value='false' checked='checked'/>No<br/>
+	<input type='button' value='Apply Login' onclick='set()'/>
+</form>
+
+<script>
+<!--//
+var set = function() {
+    var rid = document.getElementById('rid').value;
+    var fid = document.getElementById('fid');
+    fid.action = "http://jsonengine.appspot.com/_je/user-account/" + rid;
+    fid.submit();
+};
+//-->
+</script>
