@@ -1,3 +1,17 @@
+<form target="lookup" onsubmit="return path(this)">
+Owner doc id: <input type='text' name='userId'/><br/>
+<input type='submit' value='Load Lookup'/>
+</form>
+
+<iframe name="lookup"></iframe><br/>
+
+<script>
+var path = function(form){
+	form.action = "http://jsonengine.appspot.com/_je/user-chatlookup-" + form.userId.value;
+	form.submit();
+};
+</script>
+
 Owner doc id: <input type='text' id='oid'/><br/>
 Recrd doc id: <input type='text' id='rid'/><br/>
 <input type='button' value='Delete Lookup' onclick='del()'/>
