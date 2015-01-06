@@ -1,0 +1,33 @@
+<form target="lookup" onsubmit="return path(this)">
+Owner doc id: <input type='text' name='userId'/><br/>
+<input type='submit' value='Load Lookup'/>
+</form>
+
+<iframe name="lookup"></iframe><br/>
+
+<script>
+var path = function(form){
+	form.action = "http://jsonengine.appspot.com/_je/user-filelookup-" + form.userId.value;
+	form.submit();
+};
+</script>
+
+Owner doc id: <input type='text' id='oid'/><br/>
+Recrd doc id: <input type='text' id='rid'/><br/>
+<input type='button' value='Delete Lookup' onclick='del()'/>
+
+<form method="post" id='fid'>
+    <input type='hidden' name='_method' value='delete'/>
+</form>
+
+<script>
+<!--//
+var del = function() {
+    var oid = document.getElementById('oid').value;
+    var rid = document.getElementById('rid').value;
+    var fid = document.getElementById('fid');
+    fid.action = "http://jsonengine.appspot.com/_je/user-filelookup-" + oid + "/" + rid;
+    fid.submit();
+};
+//-->
+</script>
