@@ -1,0 +1,27 @@
+<form target="lookup" onsubmit="path(this)">
+Url Suffix: <input type='text' name='suffix'/><br/>
+<input type='submit' value='Load History'/>
+</form>
+
+<iframe name="lookup"></iframe><br/>
+
+<form target="remove" onsubmit="path(this)" method="post">
+Url Suffix: <input type='text' name='suffix'/><br/>
+Doc Id: <input type='text' name='docid'/><br/>
+<input type='hidden' name='_method' value="delete"/>
+<input type='submit' value='Delete History'/>
+</form>
+
+<iframe name="remove"></iframe><br/>
+
+<script>
+<!--
+var url = "http://jsonengine.appspot.com/_je/user-filehistory-";
+
+var path = function(form){
+	form.action = url + form.suffix.value + (form.docid ? ("/" + form.docid.value) : "");
+	form.submit();
+};
+
+-->
+</script>
